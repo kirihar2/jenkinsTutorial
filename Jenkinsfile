@@ -9,11 +9,11 @@ pipeline {
         stage('Example Deploy') {
            steps {
                 flywayrunner {
-                    name='jenkins flyway'
-                    command='info'
-                    url = 'jdbc:mysql://localhost:9000'
-                    locations= './flyway'
-                    credentailId=''
+                    name('jenkins flyway')
+                    command('info')
+                    url('jdbc:mysql://localhost:9000')
+                    locations('./flyway')
+                    credentailId('')
                 }
             }
         }
