@@ -8,7 +8,7 @@ node {
     }
    stage('test') {
     freeStyleJob('FlywayRunnerJob') {
-        steps {
+        steps (
           flywayRunner {
             name('flyway')
             command('migrate')
@@ -16,7 +16,7 @@ node {
             locations('filesystem:$WORKSPACE/dbscripts')
             credentialsId('44620c50-1589-4617-a677-7563985e46e1')
           }
-        }
+        )
     }
    }
     
