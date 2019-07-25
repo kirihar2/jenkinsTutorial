@@ -6,9 +6,8 @@ node {
         echo 'Hello World'
         
     }
-    freeStyleJob('FlywayDSLTest') {
-     steps { 
-        flywayrunner { 
-            name('flyway') command('info') url('jdbc:mysql://mysqlserver:3306/mydb') commandLineArgs('-skipDefaultResolvers=true') } } }
+   stage('test') {
+    flywayrunner {name ('flyway') command ('info') url ('myDBUrl') locations ('filesystem:$WORKSPACE/main') credentialsId ('xxx there is actual value xxx') commandLineArgs ('table=myTable')}
+   }
     
 }
