@@ -1,7 +1,7 @@
 freeStyleJob('FlywayRunnerJob') {
         steps {
             checkout scm
-          flywayRunner {
+          flywayrunner {
             name('flyway')
             command('migrate')
             url('jdbc:mysql://mysqlserver:3306/mydb')
