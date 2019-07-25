@@ -13,9 +13,7 @@ node {
             installationName:'jenkins flyway',
             flywayCommand:'info',
             url:'',
-            credentialsId: '',
-            commandLineArgs: ''
-            
+            credentialsId: ''            
           )
         
     }
