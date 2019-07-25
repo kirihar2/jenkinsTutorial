@@ -8,10 +8,7 @@ node {
     }
     stage('Example Deploy') {
             
-         flywayrunner { 
-            name('flyway') command('info') url('jdbc:h2://localhost:8082') commandLineArgs('-skipDefaultResolvers=true')
-        } 
-     
+         flywayrunner commandLineArgs: '-table=myTable', credentialsId: 'xxx there is actual value xxx', flywayCommand: 'info', installationName: 'Flyway', locations: 'filesystem:$WORKSPACE/main', url: 'jdbc:mysql://mysqlserver:3306/mydb' 
         
     }
     
