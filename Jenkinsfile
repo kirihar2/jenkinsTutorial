@@ -9,7 +9,7 @@ node {
     stage('Example Deploy') {
             
         //flywayrunner installationName:'jenkins flyway', flywayCommand:'info',url:'jdbc:mysql://localhost:9000',locations:'./flyway',credentialsId:'',commandLineArgs:''
-          flywayRunner {
+          flywayrunner {
             name('flyway')
             command('migrate')
             url('jdbc:mysql://mysqlserver:3306/mydb')
