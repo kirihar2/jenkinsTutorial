@@ -8,13 +8,8 @@ pipeline {
         }
         stage('Example Deploy') {
            steps {
-                flywayrunner {
-                    installationName('jenkins flyway')
-                    flywayCommand('info')
-                    url('jdbc:mysql://localhost:9000')
-                    locations('./flyway')
-                    credentailId('')
-                }
+                flywayrunner installationName='jenkins flyway', flywayCommand='info',url='jdbc:mysql://localhost:9000',locations='./flyway',credentailId=''
+                
             }
         }
     }
