@@ -8,7 +8,7 @@ node {
     }
     stage('Example Deploy') {
             
-         flywayRunner { 
+         flywayrunner { 
             name('flyway') command('info') url('jdbc:h2://localhost:8082') commandLineArgs('-skipDefaultResolvers=true')
         } 
      
