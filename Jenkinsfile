@@ -8,7 +8,7 @@ node {
     }
     stage('Example Deploy') {
             
-        flywayRunner installationName:'jenkins flyway', flywayCommand:'info',url:'jdbc:h2://localhost:8082',locations:'./flyway',credentialsId:'',commandLineArgs:''
+        flywayrunner installationName:'jenkins flyway', flywayCommand:'info',url:'jdbc:h2://localhost:8082',locations:'./flyway',credentialsId:'',commandLineArgs:''
            
         
     }
