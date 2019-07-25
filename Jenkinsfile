@@ -9,7 +9,6 @@ node {
     stage('Example Deploy') {
             
         //flywayrunner installationName:'jenkins flyway', flywayCommand:'info',url:'jdbc:mysql://localhost:9000',locations:'./flyway',credentialsId:'',commandLineArgs:''
-        steps {
           flywayrunner {
             installationName 'jenkins flyway'
             flywayCommand 'info'
@@ -18,7 +17,7 @@ node {
             commandLineArgs ''
             
           }
-        }
+        
     }
     
 }
