@@ -10,11 +10,11 @@ node {
             
         //flywayrunner installationName:'jenkins flyway', flywayCommand:'info',url:'jdbc:mysql://localhost:9000',locations:'./flyway',credentialsId:'',commandLineArgs:''
           flywayrunner(
-            installationName 'jenkins flyway'
-            flywayCommand 'info'
-            url ''
-            credentialsId ''
-            commandLineArgs ''
+            installationName:'jenkins flyway',
+            flywayCommand:'info',
+            url:'',
+            credentialsId: '',
+            commandLineArgs: ''
             
           )
         
