@@ -7,7 +7,9 @@ pipeline {
             }
         }
         stage('Example Deploy') {
-           flywayrunner info
+           steps {
+                flywayrunner info
+            }
         }
     }
 }
