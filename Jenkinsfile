@@ -8,7 +8,7 @@ node {
     }
     freeStyleJob('FlywayDSLTest') {
      steps { 
-        flywayRunner { 
+        flywayrunner { 
             name('flyway') command('info') url('jdbc:mysql://mysqlserver:3306/mydb') commandLineArgs('-skipDefaultResolvers=true') } } }
     
 }
