@@ -7,6 +7,7 @@ node {
         
     }
    stage('test') {
+      sh '/Users/jurankirihara/flyway-5.2.4/flyway'
       flywayrunner installationName: '/Users/jurankirihara/flyway-5.2.4/flyway', flywayCommand: 'info', url: 'jdbc:h2://localhost:8082', locations: 'filesystem:$WORKSPACE/dbscripts', credentialsId: '',commandLineArgs:''
       // flywayrunner {
       //   name('flyway')
